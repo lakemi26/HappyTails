@@ -1,6 +1,6 @@
 package br.com.fiap.HappyTailsAPI.model;
 
-import java.math.BigDecimal;
+//import java.math.BigDecimal;
 import java.time.LocalDate;
 
 import jakarta.persistence.Entity;
@@ -21,14 +21,15 @@ public class Adocao {
     @Positive
     private long id;
 
-    @NotBlank
+    @NotBlank(message = "{movimentacao.descricao.notblank}")
     @Size(min = 3, max = 255)
     
     private LocalDate dataAdocao;
     
     @Positive
-    private BigDecimal valor;
-    private String infoPet; //gênero | espécie
+    //private BigDecimal valor;
+    private String genero;
+    private String especie;
 
-    
+
 }
